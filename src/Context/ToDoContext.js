@@ -25,8 +25,9 @@ const ToDoContextProvider = (props) => {
             'taskDetails': 'My fourth task'
         }
     ])
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
     return(
-        <ToDoContext.Provider value={{taskList, setTaskList}}>
+        <ToDoContext.Provider value={{taskList, setTaskList, isLoggedIn, setIsLoggedIn}}>
             {
                 props.children
             }

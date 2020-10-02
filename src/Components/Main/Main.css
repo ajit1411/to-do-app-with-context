@@ -44,6 +44,17 @@
     border-bottom: 2px solid white;
 }
 
+.main__user-form .input .error{
+    width: 98%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 2% 1%;
+    height: 2em;
+    color: white;
+    background: none;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
 .main__user-form .input input:focus{
     outline: none;
 }
@@ -53,7 +64,7 @@
     width: 30%;
 }
 
-.main__user-form .submit button{
+.main__user-form .submit button, .submit button{
     width: 85%;
     height: 3em;
     border-radius: 30px;
@@ -68,7 +79,7 @@
 }
 
 .main__task-list{
-    height: 60vh;
+    height: 55vh;
     overflow-y: auto;
     /* border: 1px solid; */
     margin-top: 5%;
@@ -94,4 +105,8 @@
 
 .main__task-list .task .task-action i{
     cursor: pointer;
+}
+
+.main__application-info{
+    transform: translateY(100%);
 }
