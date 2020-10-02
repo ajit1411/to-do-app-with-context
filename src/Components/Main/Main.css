@@ -1,0 +1,97 @@
+.main__main-container{
+    height: 100vh;
+    font-family: 'Ubuntu';
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+
+.main__task-container{
+    /* border: 1px solid white; */
+    width: 30vw;
+    border-radius: 10px;
+    height: 80vh;
+    margin: 0 auto;
+    transform: translateY(15%);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    padding: 1% 2%;
+    color: white;
+}
+
+.main__task-container .title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+.main__user-form{
+    display: inline-flex;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.main__user-form .input{
+    width: 70%;
+}
+
+.main__user-form .input input{
+    width: 98%;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 2% 1%;
+    height: 2em;
+    color: white;
+    background: none;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+.main__user-form .input input:focus{
+    outline: none;
+}
+
+
+.main__user-form .submit{
+    width: 30%;
+}
+
+.main__user-form .submit button{
+    width: 85%;
+    height: 3em;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main__user-form .submit button:focus{
+    outline: none;
+}
+
+.main__task-list{
+    height: 60vh;
+    overflow-y: auto;
+    /* border: 1px solid; */
+    margin-top: 5%;
+}
+
+.main__task-list .task{
+    display: inline-flex;
+    width: 95%;
+    /* border-bottom: 1px solid white; */
+    padding: 2%;
+    margin: 2% 0%;
+}
+
+.main__task-list .task .task-name{
+    width: 70%;
+    text-align: left;
+}
+
+.main__task-list .task .task-action{
+    width: 30%;
+    text-align: right;
+}
+
+.main__task-list .task .task-action i{
+    cursor: pointer;
+}
