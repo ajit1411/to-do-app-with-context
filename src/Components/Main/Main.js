@@ -118,7 +118,7 @@ const Main = () => {
                                 <React.Fragment>
                                     <div className='main__logged-out'>
                                         <span className='title'>
-                                            Logged In
+                                            Logged Out
                                         </span>
 
                                         <div className='main__user-form'>
