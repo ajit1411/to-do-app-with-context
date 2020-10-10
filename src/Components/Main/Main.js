@@ -1,6 +1,25 @@
 import React, { useContext, useState } from 'react'
 import './Main.css'
 import { ToDoContext } from '../../Context/ToDoContext'
+
+export const Task = ({task, index, editTask, removeTask}) => {
+    return (
+        <div className='task'>
+            <div className='task-name'>
+                {
+                    task.taskName
+                }
+            </div>
+            <div className='task-action'>
+                <i className='fa fa-pencil' onClick={() => editTask(task)}></i>
+            </div>
+            <div className='task-action'>
+                <i className='fa fa-trash' onClick={() => removeTask(task)}></i>
+            </div>
+        </div>
+    )
+}
+
 const Main = () => {
     const { taskList, setTaskList, isLoggedIn, setIsLoggedIn } = useContext(ToDoContext)
     const [taskName, setTaskName] = useState('')
@@ -75,20 +94,8 @@ const Main = () => {
                                         taskList && taskList.length > 0 ? (
                                             <React.Fragment>
                                                 {
-                                                    taskList.map(task => (
-                                                        <div className='task'>
-                                                            <div className='task-name'>
-                                                                {
-                                                                    task.taskName
-                                                                }
-                                                            </div>
-                                                            <div className='task-action'>
-                                                                <i className='fa fa-pencil' onClick={() => editTask(task)}></i>
-                                                            </div>
-                                                            <div className='task-action'>
-                                                                <i className='fa fa-trash' onClick={() => removeTask(task)}></i>
-                                                            </div>
-                                                        </div>
+                                                    taskList.map((task, index) => (
+                                                        <Task task={task} key={`task_${index}`} index={index} editTask={editTask} removeTask={removeTask} />
                                                     ))
                                                 }
                                             </React.Fragment>
@@ -116,7 +123,7 @@ const Main = () => {
 
                                         <div className='main__user-form'>
                                             <div className='input'>
-                                                <input type='password' className={isPasswordWrong ? 'error': ''} placeholder='Enter password: demoUser' value={password} onChange={(event) => setPassword(event.target.value)} />
+                                                <input type='password' className={isPasswordWrong ? 'error' : ''} placeholder='Enter password: demoUser' value={password} onChange={(event) => setPassword(event.target.value)} />
                                             </div>
                                             <div className='submit'>
                                                 <button onClick={() => {
@@ -124,7 +131,7 @@ const Main = () => {
                                                         setIsLoggedIn(true)
                                                         setIsPasswordWrong(false)
                                                     }
-                                                    else{
+                                                    else {
                                                         alert('Password wrong. Use `demoUser` to login')
                                                         setIsPasswordWrong(true)
                                                     }
