@@ -23,6 +23,11 @@ const ToDoContextProvider = (props) => {
             'taskId': 'task-004',
             'taskName': 'Task 4',
             'taskDetails': 'My fourth task'
+        },
+        {
+            'taskId': 'task-005',
+            'taskName': 'Task 5',
+            'taskDetails': 'My fifth task'
         }
     ])
     const [isLoggedIn, setIsLoggedIn] = useState(false)
